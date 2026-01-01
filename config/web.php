@@ -13,8 +13,8 @@ $config = [
     ],
     'components' => [
         'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'class' => 'yii\web\Request',
+            'cookieValidationKey' => 'yii2-blog-secret-key-2026-mobile-phones',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -42,14 +42,19 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'post/<slug>/' => 'post/view',
+                'post/' => 'post/index',
+                'category/<slug>/' => 'category/view',
+                'tag/<slug>/' => 'tag/view',
+                'signup' => 'site/signup',
+                'login' => 'site/login',
+                'logout' => 'site/logout',
             ],
         ],
-        */
     ],
     'params' => $params,
 ];

@@ -1,0 +1,1627 @@
+2026-01-01 21:03:42 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Статья не найдена. in C:\xampp\htdocs\yii2_blog\controllers\PostController.php:76
+Stack trace:
+#0 [internal function]: app\controllers\PostController->actionView('index')
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('post/view', Array)
+#5 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2026-01-01 21:03:40 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = [
+    'slug' => 'index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => 'f02470105c1d5b4aa5eb697c1461a54a660333ac4a404cfa52ab9a9aaf24d715a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GOCAbFEIWRcfvAjRL6J5nsa9wsNrw0UB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=f02470105c1d5b4aa5eb697c1461a54a660333ac4a404cfa52ab9a9aaf24d715a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GOCAbFEIWRcfvAjRL6J5nsa9wsNrw0UB%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57685'
+    'REDIRECT_URL' => '/yii2_blog/web/post/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/post/index'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767297820.7508
+    'REQUEST_TIME' => 1767297820
+]
+2026-01-01 21:03:44 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Статья не найдена. in C:\xampp\htdocs\yii2_blog\controllers\PostController.php:76
+Stack trace:
+#0 [internal function]: app\controllers\PostController->actionView('index')
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('post/view', Array)
+#5 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2026-01-01 21:03:43 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = [
+    'slug' => 'index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => 'f02470105c1d5b4aa5eb697c1461a54a660333ac4a404cfa52ab9a9aaf24d715a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GOCAbFEIWRcfvAjRL6J5nsa9wsNrw0UB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=f02470105c1d5b4aa5eb697c1461a54a660333ac4a404cfa52ab9a9aaf24d715a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GOCAbFEIWRcfvAjRL6J5nsa9wsNrw0UB%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57690'
+    'REDIRECT_URL' => '/yii2_blog/web/post/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/post/index'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767297823.6382
+    'REQUEST_TIME' => 1767297823
+]
+2026-01-01 21:04:13 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\base\ErrorException:2] yii\base\ErrorException: The use statement with non-compound name 'Yii' has no effect in C:\xampp\htdocs\yii2_blog\views\layouts\main.php:12
+Stack trace:
+#0 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): yii\base\ErrorHandler->handleError(2, 'The use stateme...', 'C:\\xampp\\htdocs...', 12)
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): require()
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(428): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(414): yii\base\Controller->renderContent('<div class="sit...')
+#5 C:\xampp\htdocs\yii2_blog\controllers\SiteController.php(73): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/index', Array)
+#11 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2026-01-01 21:04:13 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii2_blog/web/post/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57710'
+    'REDIRECT_URL' => '/yii2_blog/web/site/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/site/index'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767297853.5202
+    'REQUEST_TIME' => 1767297853
+]
+2026-01-01 21:04:22 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Статья не найдена. in C:\xampp\htdocs\yii2_blog\controllers\PostController.php:76
+Stack trace:
+#0 [internal function]: app\controllers\PostController->actionView('index')
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('post/view', Array)
+#5 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2026-01-01 21:04:22 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = [
+    'slug' => 'index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57711'
+    'REDIRECT_URL' => '/yii2_blog/web/post/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/post/index'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767297862.5844
+    'REQUEST_TIME' => 1767297862
+]
+2026-01-01 21:04:24 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\base\ErrorException:2] yii\base\ErrorException: The use statement with non-compound name 'Yii' has no effect in C:\xampp\htdocs\yii2_blog\views\layouts\main.php:12
+Stack trace:
+#0 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): yii\base\ErrorHandler->handleError(2, 'The use stateme...', 'C:\\xampp\\htdocs...', 12)
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): require()
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(428): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\PostController))
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(414): yii\base\Controller->renderContent('\r\n<div class="p...')
+#5 C:\xampp\htdocs\yii2_blog\controllers\PostController.php(63): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\PostController->actionIndex()
+#7 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('post/index', Array)
+#11 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2026-01-01 21:04:24 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii2_blog/web/post/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57711'
+    'REDIRECT_URL' => '/yii2_blog/web/post'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/post'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767297864.2894
+    'REQUEST_TIME' => 1767297864
+]
+2026-01-01 21:04:35 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Статья не найдена. in C:\xampp\htdocs\yii2_blog\controllers\PostController.php:76
+Stack trace:
+#0 [internal function]: app\controllers\PostController->actionView('index')
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('post/view', Array)
+#5 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2026-01-01 21:04:35 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = [
+    'slug' => 'index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57717'
+    'REDIRECT_URL' => '/yii2_blog/web/post/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/post/index'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767297875.0693
+    'REQUEST_TIME' => 1767297875
+]
+2026-01-01 21:04:36 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\base\ErrorException:2] yii\base\ErrorException: The use statement with non-compound name 'Yii' has no effect in C:\xampp\htdocs\yii2_blog\views\layouts\main.php:12
+Stack trace:
+#0 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): yii\base\ErrorHandler->handleError(2, 'The use stateme...', 'C:\\xampp\\htdocs...', 12)
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): require()
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(428): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(414): yii\base\Controller->renderContent('<div class="sit...')
+#5 C:\xampp\htdocs\yii2_blog\controllers\SiteController.php(158): yii\base\Controller->render('about')
+#6 [internal function]: app\controllers\SiteController->actionAbout()
+#7 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('about', Array)
+#10 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/about', Array)
+#11 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2026-01-01 21:04:36 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii2_blog/web/post/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57717'
+    'REDIRECT_URL' => '/yii2_blog/web/site/about'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/site/about'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767297876.6847
+    'REQUEST_TIME' => 1767297876
+]
+2026-01-01 21:04:40 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Статья не найдена. in C:\xampp\htdocs\yii2_blog\controllers\PostController.php:76
+Stack trace:
+#0 [internal function]: app\controllers\PostController->actionView('index')
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('post/view', Array)
+#5 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2026-01-01 21:04:40 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = [
+    'slug' => 'index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57720'
+    'REDIRECT_URL' => '/yii2_blog/web/post/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/post/index'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767297880.454
+    'REQUEST_TIME' => 1767297880
+]
+2026-01-01 21:04:42 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\bootstrap5\ActiveField::emailInput() in C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Component.php:312
+Stack trace:
+#0 C:\xampp\htdocs\yii2_blog\views\site\signup.php(22): yii\base\Component->__call('emailInput', Array)
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(413): yii\base\View->render('signup', Array, Object(app\controllers\SiteController))
+#5 C:\xampp\htdocs\yii2_blog\controllers\SiteController.php(116): yii\base\Controller->render('signup', Array)
+#6 [internal function]: app\controllers\SiteController->actionSignup()
+#7 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('signup', Array)
+#10 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/signup', Array)
+#11 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2026-01-01 21:04:41 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii2_blog/web/post/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57721'
+    'REDIRECT_URL' => '/yii2_blog/web/signup'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/signup'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767297881.8364
+    'REQUEST_TIME' => 1767297881
+]
+2026-01-01 21:04:47 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Статья не найдена. in C:\xampp\htdocs\yii2_blog\controllers\PostController.php:76
+Stack trace:
+#0 [internal function]: app\controllers\PostController->actionView('index')
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('view', Array)
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('post/view', Array)
+#5 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2026-01-01 21:04:47 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = [
+    'slug' => 'index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57720'
+    'REDIRECT_URL' => '/yii2_blog/web/post/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/post/index'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767297887.4966
+    'REQUEST_TIME' => 1767297887
+]
+2026-01-01 21:06:00 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\base\ErrorException:2] yii\base\ErrorException: The use statement with non-compound name 'Yii' has no effect in C:\xampp\htdocs\yii2_blog\views\layouts\main.php:12
+Stack trace:
+#0 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): yii\base\ErrorHandler->handleError(2, 'The use stateme...', 'C:\\xampp\\htdocs...', 12)
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): require()
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(428): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(414): yii\base\Controller->renderContent('<div class="sit...')
+#5 C:\xampp\htdocs\yii2_blog\controllers\SiteController.php(73): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/index', Array)
+#11 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2026-01-01 21:06:00 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii2_blog/web/post/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57737'
+    'REDIRECT_URL' => '/yii2_blog/web/site/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/site/index'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767297960.4606
+    'REQUEST_TIME' => 1767297960
+]
+2026-01-01 21:08:14 [::1][-][957hst0dp8n86cie2otois2iss][error][Error] Error: Class "app\widgets\Yii" not found in C:\xampp\htdocs\yii2_blog\widgets\Alert.php:51
+Stack trace:
+#0 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Widget.php(149): app\widgets\Alert->run()
+#1 C:\xampp\htdocs\yii2_blog\views\layouts\main.php(126): yii\base\Widget::widget()
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(428): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#5 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(414): yii\base\Controller->renderContent('<div class="sit...')
+#6 C:\xampp\htdocs\yii2_blog\controllers\SiteController.php(72): yii\base\Controller->render('index', Array)
+#7 [internal function]: app\controllers\SiteController->actionIndex()
+#8 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#11 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/index', Array)
+#12 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2026-01-01 21:08:13 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii2_blog/web/post/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57767'
+    'REDIRECT_URL' => '/yii2_blog/web/site/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/site/index'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767298093.9597
+    'REQUEST_TIME' => 1767298093
+]
+2026-01-01 21:09:42 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\base\ErrorException:2] yii\base\ErrorException: The use statement with non-compound name 'Yii' has no effect in C:\xampp\htdocs\yii2_blog\views\site\index.php:7
+Stack trace:
+#0 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): yii\base\ErrorHandler->handleError(2, 'The use stateme...', 'C:\\xampp\\htdocs...', 7)
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): require()
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(413): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#5 C:\xampp\htdocs\yii2_blog\controllers\SiteController.php(73): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/index', Array)
+#11 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2026-01-01 21:09:42 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii2_blog/web/post/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57785'
+    'REDIRECT_URL' => '/yii2_blog/web/site/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/site/index'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767298182.6065
+    'REQUEST_TIME' => 1767298182
+]
+2026-01-01 21:09:45 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\base\ErrorException:2] yii\base\ErrorException: The use statement with non-compound name 'Yii' has no effect in C:\xampp\htdocs\yii2_blog\views\site\index.php:7
+Stack trace:
+#0 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): yii\base\ErrorHandler->handleError(2, 'The use stateme...', 'C:\\xampp\\htdocs...', 7)
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): require()
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(413): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#5 C:\xampp\htdocs\yii2_blog\controllers\SiteController.php(73): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/index', Array)
+#11 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2026-01-01 21:09:45 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii2_blog/web/post/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57786'
+    'REDIRECT_URL' => '/yii2_blog/web/site/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/site/index'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767298185.8286
+    'REQUEST_TIME' => 1767298185
+]
+2026-01-01 21:09:47 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\base\ErrorException:2] yii\base\ErrorException: The use statement with non-compound name 'Yii' has no effect in C:\xampp\htdocs\yii2_blog\views\site\index.php:7
+Stack trace:
+#0 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): yii\base\ErrorHandler->handleError(2, 'The use stateme...', 'C:\\xampp\\htdocs...', 7)
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): require()
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(413): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#5 C:\xampp\htdocs\yii2_blog\controllers\SiteController.php(73): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('index', Array)
+#10 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/index', Array)
+#11 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2026-01-01 21:09:47 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii2_blog/web/post/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57790'
+    'REDIRECT_URL' => '/yii2_blog/web/site/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/site/index'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767298187.3905
+    'REQUEST_TIME' => 1767298187
+]
+2026-01-01 21:13:00 [::1][-][957hst0dp8n86cie2otois2iss][error][ParseError] ParseError: syntax error, unexpected token "\" in C:\xampp\htdocs\yii2_blog\controllers\SiteController.php:84
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(664): class_exists('app\\controllers...')
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(623): yii\base\Module->createControllerByID('site')
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(549): yii\base\Module->createController('index')
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/index', Array)
+#5 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2026-01-01 21:13:00 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii2_blog/web/post/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57842'
+    'REDIRECT_URL' => '/yii2_blog/web/site/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/site/index'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767298380.6035
+    'REQUEST_TIME' => 1767298380
+]
+2026-01-01 21:15:08 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\bootstrap5\ActiveField::emailInput() in C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Component.php:312
+Stack trace:
+#0 C:\xampp\htdocs\yii2_blog\views\site\signup.php(22): yii\base\Component->__call('emailInput', Array)
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(413): yii\base\View->render('signup', Array, Object(app\controllers\SiteController))
+#5 C:\xampp\htdocs\yii2_blog\controllers\SiteController.php(115): yii\base\Controller->render('signup', Array)
+#6 [internal function]: app\controllers\SiteController->actionSignup()
+#7 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('signup', Array)
+#10 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/signup', Array)
+#11 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2026-01-01 21:15:08 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii2_blog/web/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '57881'
+    'REDIRECT_URL' => '/yii2_blog/web/signup'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/signup'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767298508.3743
+    'REQUEST_TIME' => 1767298508
+]
+2026-01-01 21:23:37 [::1][-][957hst0dp8n86cie2otois2iss][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\bootstrap5\ActiveField::emailInput() in C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Component.php:312
+Stack trace:
+#0 C:\xampp\htdocs\yii2_blog\views\site\signup.php(22): yii\base\Component->__call('emailInput', Array)
+#1 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#4 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(413): yii\base\View->render('signup', Array, Object(app\controllers\SiteController))
+#5 C:\xampp\htdocs\yii2_blog\controllers\SiteController.php(115): yii\base\Controller->render('signup', Array)
+#6 [internal function]: app\controllers\SiteController->actionSignup()
+#7 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Controller.php(184): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Module.php(555): yii\base\Controller->runAction('signup', Array)
+#10 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/signup', Array)
+#11 C:\xampp\htdocs\yii2_blog\vendor\yiisoft\yii2\base\Application.php(387): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\yii2_blog\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2026-01-01 21:23:37 [::1][-][957hst0dp8n86cie2otois2iss][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '957hst0dp8n86cie2otois2iss'
+    '_identity' => 'eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r\",2592000]\";}'
+    '_csrf' => '9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"05_2kndx5JccI-o13lgCzJMwr2uoE6mV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii2_blog/web/site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=957hst0dp8n86cie2otois2iss; _identity=eea37153041c66a29fce2f1f4ae5a5bac4419707ae3942e50196b108b69508ada%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22P4FxbKgWEGMQuau1Jl4fmE2EaaiYUZ9r%22%2C2592000%5D%22%3B%7D; _csrf=9657cd6fea3d10fe28c3ed6ab7991b406ad55428091bf66d604f2f0640ea5013a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2205_2kndx5JccI-o13lgCzJMwr2uoE6mV%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\System32;%JAVA_HOME%\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Android\\Android Studio\\jbr\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Дима\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Дима\\.dotnet\\tools'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/yii2_blog/web/index.php'
+    'REMOTE_PORT' => '58019'
+    'REDIRECT_URL' => '/yii2_blog/web/signup'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_blog/web/signup'
+    'SCRIPT_NAME' => '/yii2_blog/web/index.php'
+    'PHP_SELF' => '/yii2_blog/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1767299017.2321
+    'REQUEST_TIME' => 1767299017
+]

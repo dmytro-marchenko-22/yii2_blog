@@ -8,46 +8,39 @@
 use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
 
-$this->title = 'Login';
+$this->title = 'Вход';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>Please fill out the following fields to login:</p>
-
     <div class="row">
-        <div class="col-lg-5">
+        <div class="col-md-6 offset-md-3">
+            <h1><?= Html::encode($this->title) ?></h1>
 
-            <?php $form = ActiveForm::begin([
-                'id' => 'login-form',
-                'fieldConfig' => [
-                    'template' => "{label}\n{input}\n{error}",
-                    'labelOptions' => ['class' => 'col-lg-1 col-form-label mr-lg-3'],
-                    'inputOptions' => ['class' => 'col-lg-3 form-control'],
-                    'errorOptions' => ['class' => 'col-lg-7 invalid-feedback'],
-                ],
-            ]); ?>
+            <p>Пожалуйста, заполните следующие поля для входа:</p>
 
-            <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-            <?= $form->field($model, 'password')->passwordInput() ?>
+                <?= $form->field($model, 'username')->textInput(['autofocus' => true, 'placeholder' => 'Имя пользователя']) ?>
 
-            <?= $form->field($model, 'rememberMe')->checkbox([
-                'template' => "<div class=\"custom-control custom-checkbox\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
-            ]) ?>
+                <?= $form->field($model, 'password')->passwordInput(['placeholder' => 'Пароль']) ?>
 
-            <div class="form-group">
-                <div>
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                <?= $form->field($model, 'rememberMe')->checkbox([
+                    'template' => '<div class="form-check">{input} {label}</div>',
+                ]) ?>
+
+                <div class="form-group">
+                    <?= Html::submitButton('Вход', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
                 </div>
-            </div>
 
             <?php ActiveForm::end(); ?>
 
-            <div style="color:#999;">
-                You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
-                To modify the username/password, please check out the code <code>app\models\User::$users</code>.
+            <p class="mt-3">
+                Не зарегистрированы? 
+                <?= Html::a('Создайте учетную запись', ['site/signup']) ?>
+            </p>
+        </div>
+    </div>
+</div>
             </div>
 
         </div>
