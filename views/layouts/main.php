@@ -92,7 +92,7 @@ $this->registerLinkTag(['rel' => 'stylesheet', 'href' => 'https://cdnjs.cloudfla
     $menuItems = [
         ['label' => 'Головна', 'url' => ['/site/index']],
         ['label' => 'Статті', 'url' => ['/post/index']],
-        ['label' => 'Про сайт', 'url' => ['/site/about']],
+        ['label' => 'Про нас', 'url' => ['/site/about']],
     ];
     
     if (\Yii::$app->user->isGuest) {
@@ -132,7 +132,7 @@ $this->registerLinkTag(['rel' => 'stylesheet', 'href' => 'https://cdnjs.cloudfla
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center text-md-start">
-                &copy; Блог о мобильных телефонах <?= date('Y') ?>
+                &copy; Блог про мобільні телефони <?= date('Y') ?>
             </div>
             <div class="col-md-6 text-center text-md-end">
                 <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>

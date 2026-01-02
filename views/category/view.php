@@ -8,7 +8,7 @@
 use yii\bootstrap5\Html;
 use yii\widgets\LinkPager;
 
-$this->title = 'Категория: ' . Html::encode($category->name);
+$this->title = 'Категорія: ' . Html::encode($category->name);
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="row">
         <div class="col-md-8">
-            <h2 class="mb-4">Статьи в категории (<?= count($posts) ?>)</h2>
+            <h2 class="mb-4">Статті в категорії (<?= count($posts) ?>)</h2>
 
             <?php if (!empty($posts)): ?>
                 <?php foreach ($posts as $post): ?>
@@ -52,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <?php endif; ?>
                             
                             <p>
-                                <?= Html::a('Читать →', ['/post/view', 'slug' => $post->slug], ['class' => 'btn btn-sm btn-primary']) ?>
+                                <?= Html::a('Читати →', ['/post/view', 'slug' => $post->slug], ['class' => 'btn btn-sm btn-primary']) ?>
                             </p>
                         </div>
                     </div>
@@ -65,7 +65,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             <?php else: ?>
                 <div class="alert alert-info">
-                    Статей в этой категории не найдено.
+                    Статей у цій категорії не знайдено.
                 </div>
             <?php endif; ?>
         </div>
@@ -73,9 +73,9 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">О категории</h5>
+                    <h5 class="card-title">Про категорію</h5>
                     <p class="card-text">
-                        <?= $category->description ?: 'Описание категории скоро появится' ?>
+                        <?= $category->description ?: 'Опис категорії скоро з\'явиться' ?>
                     </p>
                 </div>
             </div>

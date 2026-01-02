@@ -8,7 +8,7 @@
 use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
 
-$this->title = 'Вход';
+$this->title = 'Вхід';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
@@ -16,27 +16,27 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-md-6 offset-md-3">
             <h1><?= Html::encode($this->title) ?></h1>
 
-            <p>Пожалуйста, заполните следующие поля для входа:</p>
+            <p>Будь ласка, заповніть наступні поля для входу:</p>
 
             <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true, 'placeholder' => 'Имя пользователя']) ?>
+                <?= $form->field($model, 'username')->textInput(['autofocus' => true, 'placeholder' => 'Ім\'я користувача']) ?>
 
                 <?= $form->field($model, 'password')->passwordInput(['placeholder' => 'Пароль']) ?>
 
                 <?= $form->field($model, 'rememberMe')->checkbox([
-                    'template' => '<div class="form-check">{input} {label}</div>',
+                    'template' => '<div class="form-check">{input} Запам’ятати мене</div>',
                 ]) ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Вход', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                    <?= Html::submitButton('Вхід', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
                 </div>
 
             <?php ActiveForm::end(); ?>
 
             <p class="mt-3">
-                Не зарегистрированы? 
-                <?= Html::a('Создайте учетную запись', ['site/signup']) ?>
+                Не зареєстровані? 
+                <?= Html::a('Створіть обліковий запис', ['site/signup']) ?>
             </p>
         </div>
     </div>

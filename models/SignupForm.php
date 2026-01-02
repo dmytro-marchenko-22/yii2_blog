@@ -19,7 +19,7 @@ class SignupForm extends Model
         return [
             ['username', 'trim'],
             ['username', 'required'],
-            ['username', 'unique', 'targetClass' => User::class, 'message' => 'Это имя пользователя уже занято.'],
+            ['username', 'unique', 'targetClass' => User::class, 'message' => 'Це ім\'я користувача вже зайняте.'],
             ['username', 'string', 'min' => 2, 'max' => 255],
 
             ['email', 'trim'],
@@ -31,7 +31,7 @@ class SignupForm extends Model
             ['password', 'string', 'min' => 6],
 
             ['confirmPassword', 'required'],
-            ['confirmPassword', 'compare', 'compareAttribute' => 'password', 'message' => 'Пароли не совпадают.'],
+            ['confirmPassword', 'compare', 'compareAttribute' => 'password', 'message' => 'Паролі не збігаються.'],
         ];
     }
 
@@ -41,16 +41,13 @@ class SignupForm extends Model
     public function attributeLabels()
     {
         return [
-            'username' => 'Имя пользователя',
+            'username' => 'Ім\'я користувача',
             'email' => 'Email',
             'password' => 'Пароль',
-            'confirmPassword' => 'Подтверждение пароля',
+            'confirmPassword' => 'Підтвердження пароля',
         ];
     }
 
-    /**
-     * Signs user up.
-     */
     public function signup()
     {
         if (!$this->validate()) {

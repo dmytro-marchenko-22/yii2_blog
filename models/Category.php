@@ -55,9 +55,6 @@ class Category extends ActiveRecord
         ];
     }
 
-    /**
-     * Generate slug before save
-     */
     public function beforeSave($insert)
     {
         if (!parent::beforeSave($insert)) {
@@ -71,19 +68,35 @@ class Category extends ActiveRecord
         return true;
     }
 
-    /**
-     * Generate slug from string
-     */
     public function generateSlug($string)
     {
-        $slug = preg_replace('/[^a-z0-9-]+/i', '-', strtolower($string));
+        $transliteration = [
+            'а' => 'a',  'б' => 'b',  'в' => 'v',  'г' => 'h',  'ґ' => 'g',
+            'д' => 'd',  'е' => 'e',  'є' => 'ie', 'ж' => 'zh', 'з' => 'z',
+            'и' => 'y',  'і' => 'i',  'ї' => 'i',  'й' => 'i',
+            'к' => 'k',  'л' => 'l',  'м' => 'm',  'н' => 'n',
+            'о' => 'o',  'п' => 'p',  'р' => 'r',  'с' => 's',
+            'т' => 't',  'у' => 'u',  'ф' => 'f',  'х' => 'kh',
+            'ц' => 'ts', 'ч' => 'ch', 'ш' => 'sh', 'щ' => 'shch',
+            'ь' => '',   'ю' => 'iu', 'я' => 'ia',
+            
+            'А' => 'A',  'Б' => 'B',  'В' => 'V',  'Г' => 'H',  'ґ' => 'G',
+            'Д' => 'D',  'Е' => 'E',  'Є' => 'Ie', 'Ж' => 'Zh', 'З' => 'Z',
+            'И' => 'Y',  'І' => 'I',  'Ї' => 'I',  'Й' => 'I',
+            'К' => 'K',  'Л' => 'L',  'М' => 'M',  'Н' => 'N',
+            'О' => 'O',  'П' => 'P',  'Р' => 'R',  'С' => 'S',
+            'Т' => 'T',  'У' => 'U',  'Ф' => 'F',  'Х' => 'Kh',
+            'Ц' => 'Ts', 'Ч' => 'Ch', 'Ш' => 'Sh', 'Щ' => 'Shch',
+            'Ь' => '',   'Ю' => 'Iu', 'Я' => 'Ia',
+        ];
+        
+        $slug = strtr($string, $transliteration);
+        $slug = strtolower($slug);
+        $slug = preg_replace('/[^a-z0-9]+/', '-', $slug);
         $slug = trim($slug, '-');
-        return preg_replace('/-+/', '-', $slug);
+        return $slug;
     }
 
-    /**
-     * Posts relation
-     */
     public function getPosts()
     {
         return $this->hasMany(Post::class, ['category_id' => 'id']);

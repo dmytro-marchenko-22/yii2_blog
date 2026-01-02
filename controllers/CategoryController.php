@@ -10,13 +10,13 @@ use yii\web\NotFoundHttpException;
 class CategoryController extends Controller
 {
     /**
-     * Lists posts by category.
+     * Відображення постів за категорією
      */
     public function actionView($slug)
     {
         $category = Category::findOne(['slug' => $slug]);
         if (!$category) {
-            throw new NotFoundHttpException('Категория не найдена.');
+            throw new NotFoundHttpException('Категорія не знайдена.');
         }
 
         $query = Post::find()

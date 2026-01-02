@@ -56,7 +56,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
+     * Відображення головної сторінки.
      *
      * @return string
      */
@@ -75,7 +75,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Login action.
+     * Процес входу
      *
      * @return Response|string
      */
@@ -97,7 +97,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Signup action.
+     * Процес рееєстрації.
      *
      * @return Response|string
      */
@@ -118,7 +118,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Logout action.
+     * Процес виходу із сайту.
      *
      * @return Response
      */
@@ -130,7 +130,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays contact page.
+     * Відображення сторінки контактів.
      *
      * @return Response|string
      */
@@ -148,7 +148,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays about page.
+     * Відображення інформації про сторінку "Про нас".
      *
      * @return string
      */

@@ -6,7 +6,7 @@
 use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
 
-$this->title = 'Регистрация';
+$this->title = 'Реєстрація';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-signup">
@@ -14,26 +14,26 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-md-6 offset-md-3">
             <h1><?= Html::encode($this->title) ?></h1>
 
-            <p>Пожалуйста, заполните следующие поля для регистрации:</p>
+            <p>Будь ласка, заповніть наступні поля для реєстрації:</p>
 
             <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true, 'placeholder' => 'Ваше имя пользователя']) ?>
+                <?= $form->field($model, 'username')->textInput(['autofocus' => true, 'placeholder' => 'Ваше ім\'я користувача']) ?>
 
-                <?= $form->field($model, 'email')->emailInput(['placeholder' => 'Ваш email']) ?>
+                <?= $form->field($model, 'email')->textInput(['type' => 'email', 'placeholder' => 'Ваш email']) ?>
 
                 <?= $form->field($model, 'password')->passwordInput(['placeholder' => 'Пароль']) ?>
 
-                <?= $form->field($model, 'confirmPassword')->passwordInput(['placeholder' => 'Повторите пароль']) ?>
+                <?= $form->field($model, 'confirmPassword')->passwordInput(['placeholder' => 'Повторіть пароль']) ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Зарегистрироваться', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
+                    <?= Html::submitButton('Зареєструватися', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
                 </div>
 
             <?php ActiveForm::end(); ?>
 
             <p class="mt-3">
-                Уже зарегистрированы? 
-                <?= Html::a('Войдите сюда', ['site/login']) ?>
+                Вже зареєстровані?? 
+                <?= Html::a('Увійдіть сюди', ['site/login']) ?>
             </p>
         </div>
     </div>
