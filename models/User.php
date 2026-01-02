@@ -53,6 +53,23 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * {@inheritdoc}
      */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'username' => 'Ім\'я користувача',
+            'email' => 'Email',
+            'password_hash' => 'Пароль',
+            'status' => 'Статус',
+            'is_admin' => 'Адміністратор',
+            'created_at' => 'Дата створення',
+            'updated_at' => 'Дата оновлення',
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public static function findIdentity($id)
     {
         return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);

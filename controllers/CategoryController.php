@@ -6,11 +6,118 @@ use app\models\Category;
 use app\models\Post;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
+use yii\data\Pagination;
 
 class CategoryController extends Controller
 {
     /**
-     * Відображення постів за категорією
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::class,
+                'only' => ['index', 'create', 'update', 'delete'],
+                'rules' => [
+                    [
+                        'actions' => ['index', 'create', 'update', 'delete'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                        'matchCallback' => function ($rule, $action) {
+                            $user = \Yii::$app->user->identity;
+                            return $user && ($user->is_admin == 1);
+                        }
+                    ],
+                    [
+                        'actions' => ['view'],
+                        'allow' => true,
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::class,
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
+    }
+
+    /**
+     * Список всех категорий (для администратора)
+     */
+    public function actionIndex()
+    {
+        $query = Category::find();
+        
+        $pagination = new Pagination([
+            'defaultPageSize' => 20,
+            'totalCount' => $query->count(),
+        ]);
+        
+        $categories = $query->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+        return $this->render('index', [
+            'categories' => $categories,
+            'pagination' => $pagination,
+        ]);
+    }
+
+    /**
+     * Создание новой категории
+     */
+    public function actionCreate()
+    {
+        $model = new Category();
+
+        if ($model->load(\Yii::$app->request->post()) && $model->save()) {
+            \Yii::$app->session->setFlash('success', 'Категорія успішно створена.');
+            return $this->redirect(['index']);
+        }
+
+        return $this->render('create', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Редактирование категории
+     */
+    public function actionUpdate($id)
+    {
+        $model = $this->findModel($id);
+
+        if ($model->load(\Yii::$app->request->post()) && $model->save()) {
+            \Yii::$app->session->setFlash('success', 'Категорія успішно оновлена.');
+            return $this->redirect(['index']);
+        }
+
+        return $this->render('update', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Удаление категории
+     */
+    public function actionDelete($id)
+    {
+        $model = $this->findModel($id);
+        
+        if ($model->delete()) {
+            \Yii::$app->session->setFlash('success', 'Категорія успішно видалена.');
+        }
+
+        return $this->redirect(['index']);
+    }
+
+    /**
+     * Отображение постов за категорией
      */
     public function actionView($slug)
     {
@@ -24,7 +131,7 @@ class CategoryController extends Controller
             ->with('author')
             ->orderBy(['created_at' => SORT_DESC]);
             
-        $pagination = new \yii\data\Pagination([
+        $pagination = new Pagination([
             'defaultPageSize' => 10,
             'totalCount' => $query->count(),
         ]);
@@ -38,5 +145,17 @@ class CategoryController extends Controller
             'posts' => $posts,
             'pagination' => $pagination,
         ]);
+    }
+
+    /**
+     * Поиск модели по ID
+     */
+    protected function findModel($id)
+    {
+        if (($model = Category::findOne($id)) !== null) {
+            return $model;
+        }
+
+        throw new NotFoundHttpException('Запрошена категорія не знайдена.');
     }
 }

@@ -6,11 +6,118 @@ use app\models\Tag;
 use app\models\Post;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
+use yii\data\Pagination;
 
 class TagController extends Controller
 {
     /**
-     * Перелік публікацій за міткою.
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::class,
+                'only' => ['index', 'create', 'update', 'delete'],
+                'rules' => [
+                    [
+                        'actions' => ['index', 'create', 'update', 'delete'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                        'matchCallback' => function ($rule, $action) {
+                            $user = \Yii::$app->user->identity;
+                            return $user && ($user->is_admin == 1);
+                        }
+                    ],
+                    [
+                        'actions' => ['view'],
+                        'allow' => true,
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::class,
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
+    }
+
+    /**
+     * Список всех тегов (для администратора)
+     */
+    public function actionIndex()
+    {
+        $query = Tag::find();
+        
+        $pagination = new Pagination([
+            'defaultPageSize' => 20,
+            'totalCount' => $query->count(),
+        ]);
+        
+        $tags = $query->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+        return $this->render('index', [
+            'tags' => $tags,
+            'pagination' => $pagination,
+        ]);
+    }
+
+    /**
+     * Создание нового тега
+     */
+    public function actionCreate()
+    {
+        $model = new Tag();
+
+        if ($model->load(\Yii::$app->request->post()) && $model->save()) {
+            \Yii::$app->session->setFlash('success', 'Мітка успішно створена.');
+            return $this->redirect(['index']);
+        }
+
+        return $this->render('create', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Редактирование тега
+     */
+    public function actionUpdate($id)
+    {
+        $model = $this->findModel($id);
+
+        if ($model->load(\Yii::$app->request->post()) && $model->save()) {
+            \Yii::$app->session->setFlash('success', 'Мітка успішно оновлена.');
+            return $this->redirect(['index']);
+        }
+
+        return $this->render('update', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Удаление тега
+     */
+    public function actionDelete($id)
+    {
+        $model = $this->findModel($id);
+        
+        if ($model->delete()) {
+            \Yii::$app->session->setFlash('success', 'Мітка успішно видалена.');
+        }
+
+        return $this->redirect(['index']);
+    }
+
+    /**
+     * Список публикаций с определенным тегом
      */
     public function actionView($slug)
     {
@@ -26,7 +133,7 @@ class TagController extends Controller
             ->orderBy(['{{%post}}.created_at' => SORT_DESC])
             ->distinct();
             
-        $pagination = new \yii\data\Pagination([
+        $pagination = new Pagination([
             'defaultPageSize' => 10,
             'totalCount' => $query->count(),
         ]);
@@ -40,5 +147,17 @@ class TagController extends Controller
             'posts' => $posts,
             'pagination' => $pagination,
         ]);
+    }
+
+    /**
+     * Поиск модели по ID
+     */
+    protected function findModel($id)
+    {
+        if (($model = Tag::findOne($id)) !== null) {
+            return $model;
+        }
+
+        throw new NotFoundHttpException('Запрошена мітка не знайдена.');
     }
 }

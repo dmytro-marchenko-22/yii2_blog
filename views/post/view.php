@@ -9,7 +9,7 @@ use yii\bootstrap5\Html;
 use yii\bootstrap5\ActiveForm;
 
 $this->title = Html::encode($post->title);
-$this->params['breadcrumbs'][] = ['label' => 'Статьи', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Статті', 'url' => ['index']];
 if ($post->category) {
     $this->params['breadcrumbs'][] = ['label' => $post->category->name, 'url' => ['/category/view', 'slug' => $post->category->slug]];
 }
@@ -84,6 +84,13 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="text-muted small"><?= date('d.m.Y H:i', $item->created_at) ?></div>
                     <p><?= Html::encode($item->content) ?></p>
 
+                    <?php if (!\Yii::$app->user->isGuest && \Yii::$app->user->identity->is_admin): ?>
+                        <form method="post" action="<?= \Yii::$app->urlManager->createUrl(['/comment/delete', 'id' => $item->id]) ?>" style="display:inline;">
+                            <?= Html::hiddenInput(\Yii::$app->request->csrfParam, \Yii::$app->request->csrfToken) ?>
+                            <?= Html::submitButton('Видалити', ['class' => 'btn btn-sm btn-danger', 'onclick' => 'return confirm("Видалити цей коментар?");']) ?>
+                        </form>
+                    <?php endif; ?>
+
                     <?php if (!empty($item->replies)): ?>
                         <div style="margin-left: 30px;">
                             <?php foreach ($item->replies as $reply): ?>
@@ -91,6 +98,13 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <strong><?= Html::encode($reply->name) ?></strong>
                                     <div class="text-muted small"><?= date('d.m.Y H:i', $reply->created_at) ?></div>
                                     <p><?= Html::encode($reply->content) ?></p>
+
+                                    <?php if (!\Yii::$app->user->isGuest && \Yii::$app->user->identity->is_admin): ?>
+                                        <form method="post" action="<?= \Yii::$app->urlManager->createUrl(['/comment/delete', 'id' => $reply->id]) ?>" style="display:inline;">
+                                            <?= Html::hiddenInput(\Yii::$app->request->csrfParam, \Yii::$app->request->csrfToken) ?>
+                                            <?= Html::submitButton('Видалити', ['class' => 'btn btn-sm btn-danger', 'onclick' => 'return confirm("Видалити цей коментар?");']) ?>
+                                        </form>
+                                    <?php endif; ?>
                                 </div>
                             <?php endforeach; ?>
                         </div>

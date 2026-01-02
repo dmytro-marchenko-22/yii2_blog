@@ -9,16 +9,16 @@ use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
 
 $this->title = 'Створити нову статтю';
-$this->params['breadcrumbs'][] = ['label' => 'Статьи', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Статті', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="post-create">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <h1><?= Html::encode($this->title) ?></h1>
+            <h1 style="margin-left: -215px;"><?= Html::encode($this->title) ?></h1>
 
-            <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+            <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data', 'style' => 'margin-left: -215px;']]); ?>
 
                 <?= $form->field($post, 'title')->textInput(['maxlength' => true, 'placeholder' => 'Название статьи']) ?>
 

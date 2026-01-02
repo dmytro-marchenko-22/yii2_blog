@@ -121,7 +121,7 @@ $this->registerLinkTag(['rel' => 'stylesheet', 'href' => 'https://cdnjs.cloudfla
 <main id="main" class="flex-shrink-0" role="main">
     <div class="container">
         <?php if (!empty($this->params['breadcrumbs'])): ?>
-            <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
+            <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs'], 'options' => ['style' => 'margin-top: -35px; margin-bottom: 20px;']]) ?>
         <?php endif ?>
         <?= Alert::widget() ?>
         <?= $content ?>

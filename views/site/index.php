@@ -72,7 +72,7 @@ $this->title = 'Блог про мобільні телефони';
             </div>
             
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4" style="margin-top: 63px;">
                     <div class="card-body">
                         <h5 class="card-title">Про блог</h5>
                         <p class="card-text">
@@ -86,10 +86,10 @@ $this->title = 'Блог про мобільні телефони';
                     <div class="card-body">
                         <h5 class="card-title">Популярні мітки</h5>
                         <div>
-                            <span class="tag"><a href="/tag/samsung/">Samsung</a></span>
-                            <span class="tag"><a href="/tag/iphone/">iPhone</a></span>
-                            <span class="tag"><a href="/tag/android/">Android</a></span>
-                            <span class="tag"><a href="/tag/огляд/">Огляд</a></span>
+                            <span class="tag"><?= Html::a('Samsung', ['/tag/view', 'slug' => 'samsung']) ?></span>
+                            <span class="tag"><?= Html::a('iPhone', ['/tag/view', 'slug' => 'iphone']) ?></span>
+                            <span class="tag"><?= Html::a('Android', ['/tag/view', 'slug' => 'android']) ?></span>
+                            <span class="tag"><?= Html::a('Огляд', ['/tag/view', 'slug' => 'oglyad']) ?></span>
                         </div>
                     </div>
                 </div>

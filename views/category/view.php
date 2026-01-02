@@ -71,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
 
         <div class="col-md-4">
-            <div class="card">
+            <div class="card" style="margin-top: 63px;">
                 <div class="card-body">
                     <h5 class="card-title">Про категорію</h5>
                     <p class="card-text">

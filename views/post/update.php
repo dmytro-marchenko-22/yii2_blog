@@ -10,7 +10,7 @@ use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
 
 $this->title = 'Редагувати статтю';
-$this->params['breadcrumbs'][] = ['label' => 'Статьи', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Статті', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $post->title, 'url' => ['view', 'slug' => $post->slug]];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

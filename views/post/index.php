@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="post-index">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1 style="margin-top: 15px; margin-bottom: 15px;"><?= Html::encode($this->title) ?></h1>
 
     <div class="row">
         <div class="col-md-8">
@@ -73,6 +73,18 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="card-body">
                         <h5 class="card-title">Створити статтю</h5>
                         <p><?= Html::a('Написати нову статтю', ['create'], ['class' => 'btn btn-primary btn-sm']) ?></p>
+                    </div>
+                </div>
+            <?php endif; ?>
+
+            <?php if (!\Yii::$app->user->isGuest && \Yii::$app->user->identity->is_admin): ?>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Керування</h5>
+                        <div class="d-grid gap-2">
+                            <p><?= Html::a('Переглянути категорії', ['/category/index'], ['class' => 'btn btn-success btn-sm']) ?></p>
+                            <p><?= Html::a('Переглянути мітки', ['/tag/index'], ['class' => 'btn btn-warning btn-sm']) ?></p>
+                        </div>
                     </div>
                 </div>
             <?php endif; ?>

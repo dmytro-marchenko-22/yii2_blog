@@ -46,13 +46,35 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                // Admin
+                'admin/' => 'admin/index',
+                
+                // Category management (specific routes before general)
+                'category/create' => 'category/create',
+                'category/update/<id>' => 'category/update',
+                'category/delete/<id>' => 'category/delete',
+                'category/' => 'category/index',
+                'category/<slug>/' => 'category/view',
+                
+                // Tag management (specific routes before general)
+                'tag/create' => 'tag/create',
+                'tag/update/<id>' => 'tag/update',
+                'tag/delete/<id>' => 'tag/delete',
+                'tag/' => 'tag/index',
+                'tag/<slug>/' => 'tag/view',
+                
+                // Comment management
+                'comment/create' => 'comment/create',
+                'comment/delete/<id>' => 'comment/delete',
+                
+                // Post management (specific routes before general)
                 'post/create' => 'post/create',
                 'post/update/<id>' => 'post/update',
                 'post/delete/<id>' => 'post/delete',
-                'post/<slug>/' => 'post/view',
                 'post/' => 'post/index',
-                'category/<slug>/' => 'category/view',
-                'tag/<slug>/' => 'tag/view',
+                'post/<slug>/' => 'post/view',
+                
+                // Site
                 'signup' => 'site/signup',
                 'login' => 'site/login',
                 'logout' => 'site/logout',
