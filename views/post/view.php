@@ -84,15 +84,44 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="text-muted small"><?= date('d.m.Y H:i', $item->created_at) ?></div>
                     <p><?= Html::encode($item->content) ?></p>
 
-                    <?php if (!\Yii::$app->user->isGuest && \Yii::$app->user->identity->is_admin): ?>
-                        <form method="post" action="<?= \Yii::$app->urlManager->createUrl(['/comment/delete', 'id' => $item->id]) ?>" style="display:inline;">
-                            <?= Html::hiddenInput(\Yii::$app->request->csrfParam, \Yii::$app->request->csrfToken) ?>
-                            <?= Html::submitButton('Видалити', ['class' => 'btn btn-sm btn-danger', 'onclick' => 'return confirm("Видалити цей коментар?");']) ?>
-                        </form>
-                    <?php endif; ?>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="document.getElementById('reply-form-<?= $item->id ?>').style.display = document.getElementById('reply-form-<?= $item->id ?>').style.display === 'none' ? 'block' : 'none';">
+                            Відповісти
+                        </button>
+
+                        <?php if (!\Yii::$app->user->isGuest && \Yii::$app->user->identity->is_admin): ?>
+                            <form method="post" action="<?= \Yii::$app->urlManager->createUrl(['/comment/delete', 'id' => $item->id]) ?>" style="display:inline;">
+                                <?= Html::hiddenInput(\Yii::$app->request->csrfParam, \Yii::$app->request->csrfToken) ?>
+                                <?= Html::submitButton('Видалити', ['class' => 'btn btn-sm btn-danger', 'onclick' => 'return confirm("Видалити цей коментар?");']) ?>
+                            </form>
+                        <?php endif; ?>
+                    </div>
+
+                    <!-- Форма для ответа -->
+                    <div id="reply-form-<?= $item->id ?>" style="display: none; margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd;">
+                        <?php $form = ActiveForm::begin(['action' => ['/comment/create']]); ?>
+                            <input type="hidden" name="Comment[post_id]" value="<?= $post->id ?>">
+                            <input type="hidden" name="Comment[parent_id]" value="<?= $item->id ?>">
+
+                            <?php if (!\Yii::$app->user->isGuest): ?>
+                                <input type="hidden" name="Comment[user_id]" value="<?= \Yii::$app->user->id ?>">
+                                <input type="hidden" name="Comment[name]" value="<?= Html::encode(\Yii::$app->user->identity->username) ?>">
+                                <input type="hidden" name="Comment[email]" value="<?= Html::encode(\Yii::$app->user->identity->email) ?>">
+                                
+                                <div class="mb-3">
+                                    <textarea class="form-control" name="Comment[content]" rows="3" placeholder="Напишіть вашу відповідь..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-primary">Надіслати відповідь</button>
+                            <?php else: ?>
+                                <div class="alert alert-info">
+                                    <a href="<?= \Yii::$app->urlManager->createUrl(['/site/login']) ?>">Увійдіть</a>, щоб відповісти на коментар
+                                </div>
+                            <?php endif; ?>
+                        <?php ActiveForm::end(); ?>
+                    </div>
 
                     <?php if (!empty($item->replies)): ?>
-                        <div style="margin-left: 30px;">
+                        <div style="margin-left: 30px; margin-top: 15px;">
                             <?php foreach ($item->replies as $reply): ?>
                                 <div class="comment mb-2" style="border-left: 3px solid #6c757d; padding-left: 15px;">
                                     <strong><?= Html::encode($reply->name) ?></strong>

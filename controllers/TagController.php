@@ -47,7 +47,7 @@ class TagController extends Controller
     }
 
     /**
-     * Список всех тегов (для администратора)
+     * Список всіх міток (для адміністратора)
      */
     public function actionIndex()
     {
@@ -69,7 +69,7 @@ class TagController extends Controller
     }
 
     /**
-     * Создание нового тега
+     * Створення нової мітки
      */
     public function actionCreate()
     {
@@ -86,7 +86,7 @@ class TagController extends Controller
     }
 
     /**
-     * Редактирование тега
+     * Редагування мітки
      */
     public function actionUpdate($id)
     {
@@ -103,7 +103,7 @@ class TagController extends Controller
     }
 
     /**
-     * Удаление тега
+     * Видалення мітки
      */
     public function actionDelete($id)
     {
@@ -117,7 +117,7 @@ class TagController extends Controller
     }
 
     /**
-     * Список публикаций с определенным тегом
+     * Список публікацій з певною міткою
      */
     public function actionView($slug)
     {
@@ -150,7 +150,7 @@ class TagController extends Controller
     }
 
     /**
-     * Поиск модели по ID
+     * Пошук моделі за ID
      */
     protected function findModel($id)
     {

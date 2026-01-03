@@ -84,6 +84,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="d-grid gap-2">
                             <p><?= Html::a('Переглянути категорії', ['/category/index'], ['class' => 'btn btn-success btn-sm']) ?></p>
                             <p><?= Html::a('Переглянути мітки', ['/tag/index'], ['class' => 'btn btn-warning btn-sm']) ?></p>
+                            <p><?= Html::a('Переглянути коментарі', ['/comment/index'], ['class' => 'btn btn-sm', 'style' => 'background-color: #6f42c1; color: white; border-color: #6f42c1;']) ?></p>
                         </div>
                     </div>
                 </div>

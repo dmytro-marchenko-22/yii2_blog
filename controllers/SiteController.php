@@ -10,6 +10,9 @@ use app\models\LoginForm;
 use app\models\SignupForm;
 use app\models\ContactForm;
 use app\models\Post;
+use app\models\Tag;
+use app\models\Category;
+use yii\db\Query;
 
 class SiteController extends Controller
 {
@@ -69,8 +72,22 @@ class SiteController extends Controller
             ->limit(5)
             ->all();
 
+        // Отримати мітки з хоча б одним дописом
+        $tags = Tag::find()
+            ->innerJoinWith('posts', false)
+            ->groupBy(['tag.id'])
+            ->orderBy(['COUNT(post.id)' => SORT_DESC])
+            ->all();
+
+        // Отримати всі категорії
+        $categories = Category::find()
+            ->orderBy(['name' => SORT_ASC])
+            ->all();
+
         return $this->render('index', [
             'posts' => $posts,
+            'tags' => $tags,
+            'categories' => $categories,
         ]);
     }
 

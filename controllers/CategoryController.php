@@ -47,7 +47,7 @@ class CategoryController extends Controller
     }
 
     /**
-     * Список всех категорий (для администратора)
+     * Список всіх категорій (для адміністратора)
      */
     public function actionIndex()
     {
@@ -69,7 +69,7 @@ class CategoryController extends Controller
     }
 
     /**
-     * Создание новой категории
+     * Створення нової категорії
      */
     public function actionCreate()
     {
@@ -86,7 +86,7 @@ class CategoryController extends Controller
     }
 
     /**
-     * Редактирование категории
+     * Редагування категорії
      */
     public function actionUpdate($id)
     {
@@ -103,7 +103,7 @@ class CategoryController extends Controller
     }
 
     /**
-     * Удаление категории
+     * Видалення категорії
      */
     public function actionDelete($id)
     {
@@ -117,7 +117,7 @@ class CategoryController extends Controller
     }
 
     /**
-     * Отображение постов за категорией
+     * Відображення постів за категорією
      */
     public function actionView($slug)
     {
@@ -148,7 +148,7 @@ class CategoryController extends Controller
     }
 
     /**
-     * Поиск модели по ID
+     * Пошук моделі за ID
      */
     protected function findModel($id)
     {

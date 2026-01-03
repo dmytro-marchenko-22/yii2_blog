@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ]) ?>
 
                 <div class="mb-3">
-                    <label class="form-label">Метки:</label>
+                    <label class="form-label">Мітки:</label>
                     <div>
                         <?php 
                         $selectedTagIds = array_map(function($t) { return $t->id; }, $selectedTags);

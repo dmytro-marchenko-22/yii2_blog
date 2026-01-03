@@ -61,7 +61,7 @@ class InitController extends Controller
         // Створення міток
         $tags = [
             'iPhone', 'Samsung', 'Android', 'iOS', 'Огляд', 
-            '5G', 'Камера', 'Батарея', 'Дизайн', 'Продуктивність'
+            '5G', 'Камера', 'Батарея', 'Дизайн'
         ];
 
         foreach ($tags as $tagName) {

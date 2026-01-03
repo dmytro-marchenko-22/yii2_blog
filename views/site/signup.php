@@ -7,7 +7,6 @@ use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
 
 $this->title = 'Реєстрація';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-signup">
     <div class="row">

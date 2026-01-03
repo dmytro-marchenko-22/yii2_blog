@@ -53,7 +53,7 @@ $this->registerLinkTag(['rel' => 'stylesheet', 'href' => 'https://cdnjs.cloudfla
         }
         .post-image {
             width: 100%;
-            height: 200px;
+            height: 150px;
             object-fit: cover;
             border-radius: 8px 8px 0 0;
         }
@@ -91,18 +91,31 @@ $this->registerLinkTag(['rel' => 'stylesheet', 'href' => 'https://cdnjs.cloudfla
     
     $menuItems = [
         ['label' => 'Головна', 'url' => ['/site/index']],
-        ['label' => 'Статті', 'url' => ['/post/index']],
         ['label' => 'Про нас', 'url' => ['/site/about']],
     ];
+    
+    $user = \Yii::$app->user->identity;
+    if (!$user || $user->is_admin != 1) {
+    } else {
+        array_splice($menuItems, 1, 0, [
+            ['label' => 'Статті', 'url' => ['/post/index']]
+        ]);
+    }
     
     if (\Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Вхід', 'url' => ['/site/login']];
         $menuItems[] = ['label' => 'Реєстрація', 'url' => ['/site/signup']];
     } else {
-        $menuItems[] = [
-            'label' => 'Нова стаття',
-            'url' => ['/post/create']
-        ];
+        if ($user && $user->is_admin == 1) {
+            $menuItems[] = [
+                'label' => 'Нова стаття',
+                'url' => ['/post/create']
+            ];
+            $menuItems[] = [
+                'label' => 'Панель адміністратора',
+                'url' => ['/admin/index']
+            ];
+        }
         $menuItems[] = [
             'label' => 'Вихід (' . \Yii::$app->user->identity->username . ')',
             'url' => ['/site/logout'],

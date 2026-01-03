@@ -31,7 +31,7 @@ class AdminController extends Controller
     }
 
     /**
-     * Главная страница администратора
+     * Головна сторінка адміністратора.
      */
     public function actionIndex()
     {

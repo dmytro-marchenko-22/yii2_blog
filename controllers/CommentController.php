@@ -19,12 +19,11 @@ class CommentController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::class,
-                'only' => ['delete'],
+                'only' => ['index', 'delete'],
                 'rules' => [
                     [
-                        'actions' => ['delete'],
+                        'actions' => ['index', 'delete'],
                         'allow' => true,
-                        'roles' => ['@'],
                         'matchCallback' => function ($rule, $action) {
                             $user = \Yii::$app->user->identity;
                             return $user && ($user->is_admin == 1);
@@ -40,6 +39,18 @@ class CommentController extends Controller
                 ],
             ],
         ];
+    }
+
+    /**
+     * Список всіх коментарів.
+     */
+    public function actionIndex()
+    {
+        $comments = Comment::find()->orderBy(['created_at' => SORT_DESC])->all();
+        
+        return $this->render('index', [
+            'comments' => $comments,
+        ]);
     }
 
     /**

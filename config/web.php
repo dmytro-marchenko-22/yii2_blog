@@ -64,6 +64,7 @@ $config = [
                 'tag/<slug>/' => 'tag/view',
                 
                 // Comment management
+                'comment/' => 'comment/index',
                 'comment/create' => 'comment/create',
                 'comment/delete/<id>' => 'comment/delete',
                 
