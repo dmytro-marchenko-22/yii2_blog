@@ -7,11 +7,12 @@
 use yii\bootstrap5\Html;
 use yii\widgets\LinkPager;
 
-$this->title = 'Усі статті';
+$this->title = 'Чернетки';
+$this->params['breadcrumbs'][] = ['label' => 'Статті', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="post-index">
+<div class="post-drafts">
     <h1 style="margin-top: 15px; margin-bottom: 15px;"><?= Html::encode($this->title) ?></h1>
 
     <div class="row">
@@ -36,6 +37,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                     ) ?>
                                 <?php endif; ?>
                             </div>
+                            <div class="alert alert-warning">
+                                <strong>Статус:</strong> Чернетка
+                            </div>
                             <p><?= Html::encode(substr(strip_tags($post->content), 0, 200)) ?>...</p>
                             
                             <?php if ($post->tags): ?>
@@ -49,7 +53,11 @@ $this->params['breadcrumbs'][] = $this->title;
                             <?php endif; ?>
                             
                             <p>
-                                <?= Html::a('Читати →', ['view', 'slug' => $post->slug], ['class' => 'btn btn-sm btn-primary']) ?>
+                                <?= Html::a('Редагувати', ['update', 'id' => $post->id], ['class' => 'btn btn-sm btn-warning']) ?>
+                                <form method="post" action="<?= \Yii::$app->urlManager->createUrl(['post/delete', 'id' => $post->id]) ?>" style="display:inline;">
+                                    <?= Html::hiddenInput(\Yii::$app->request->csrfParam, \Yii::$app->request->csrfToken) ?>
+                                    <?= Html::submitButton('Видалити', ['class' => 'btn btn-sm btn-danger', 'onclick' => 'return confirm("Ви впевнені?");']) ?>
+                                </form>
                             </p>
                         </div>
                     </div>
@@ -62,42 +70,18 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             <?php else: ?>
                 <div class="alert alert-info">
-                    Статей не знайдено.
+                    Чернеток не знайдено.
                 </div>
             <?php endif; ?>
         </div>
 
         <div class="col-md-4">
-            <?php if (!\Yii::$app->user->isGuest): ?>
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Створити статтю</h5>
-                        <p><?= Html::a('Написати нову статтю', ['create'], ['class' => 'btn btn-primary btn-sm']) ?></p>
-                    </div>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Створити статтю</h5>
+                    <p><?= Html::a('Написати нову статтю', ['create'], ['class' => 'btn btn-primary btn-sm']) ?></p>
                 </div>
-            <?php endif; ?>
-
-            <?php if (!\Yii::$app->user->isGuest && \Yii::$app->user->identity->is_admin): ?>
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Чернетки</h5>
-                        <p><?= Html::a('Переглянути чернетки', ['drafts'], ['class' => 'btn btn-secondary btn-sm']) ?></p>
-                    </div>
-                </div>
-            <?php endif; ?>
-
-            <?php if (!\Yii::$app->user->isGuest && \Yii::$app->user->identity->is_admin): ?>
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Керування</h5>
-                        <div class="d-grid gap-2">
-                            <p><?= Html::a('Переглянути категорії', ['/category/index'], ['class' => 'btn btn-success btn-sm']) ?></p>
-                            <p><?= Html::a('Переглянути мітки', ['/tag/index'], ['class' => 'btn btn-warning btn-sm']) ?></p>
-                            <p><?= Html::a('Переглянути коментарі', ['/comment/index'], ['class' => 'btn btn-sm', 'style' => 'background-color: #6f42c1; color: white; border-color: #6f42c1;']) ?></p>
-                        </div>
-                    </div>
-                </div>
-            <?php endif; ?>
+            </div>
         </div>
     </div>
 </div>

@@ -1,0 +1,40 @@
+<?php
+
+return [
+    [
+        'id' => 1,
+        'title' => 'Getting Started with PHP',
+        'slug' => 'getting-started-with-php',
+        'content' => 'This is a comprehensive guide for beginners to learn PHP programming.',
+        'category_id' => 1,
+        'author_id' => 1,
+        'image' => null,
+        'status' => \app\models\Post::STATUS_PUBLISHED,
+        'created_at' => time(),
+        'updated_at' => time(),
+    ],
+    [
+        'id' => 2,
+        'title' => 'Understanding Yii2 Framework',
+        'slug' => 'understanding-yii2-framework',
+        'content' => 'Learn about the Yii2 framework and its features.',
+        'category_id' => 1,
+        'author_id' => 1,
+        'image' => null,
+        'status' => \app\models\Post::STATUS_PUBLISHED,
+        'created_at' => time(),
+        'updated_at' => time(),
+    ],
+    [
+        'id' => 3,
+        'title' => 'Draft Post',
+        'slug' => 'draft-post',
+        'content' => 'This is a draft post that should not be visible to guests.',
+        'category_id' => 1,
+        'author_id' => 1,
+        'image' => null,
+        'status' => \app\models\Post::STATUS_DRAFT,
+        'created_at' => time(),
+        'updated_at' => time(),
+    ],
+];

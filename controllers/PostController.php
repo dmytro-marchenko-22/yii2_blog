@@ -79,6 +79,31 @@ class PostController extends Controller
     }
 
     /**
+     * Список чернеток (тільки для адміністраторів).
+     */
+    public function actionDrafts()
+    {
+        $query = Post::find()
+            ->with('author', 'category')
+            ->where(['status' => Post::STATUS_DRAFT])
+            ->orderBy(['created_at' => SORT_DESC]);
+            
+        $pagination = new \yii\data\Pagination([
+            'defaultPageSize' => 10,
+            'totalCount' => $query->count(),
+        ]);
+        
+        $posts = $query->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+        return $this->render('drafts', [
+            'posts' => $posts,
+            'pagination' => $pagination,
+        ]);
+    }
+
+    /**
      * Відображення публікації.
      */
     public function actionView($slug)

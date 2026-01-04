@@ -1,0 +1,40 @@
+<?php
+
+return [
+    [
+        'id' => 1,
+        'post_id' => 1,
+        'parent_id' => null,
+        'user_id' => 2,
+        'name' => 'John Doe',
+        'email' => 'john@example.com',
+        'content' => 'Great article! Very helpful for beginners.',
+        'status' => \app\models\Comment::STATUS_ACTIVE,
+        'created_at' => time(),
+        'updated_at' => time(),
+    ],
+    [
+        'id' => 2,
+        'post_id' => 1,
+        'parent_id' => 1,
+        'user_id' => 3,
+        'name' => 'Jane Smith',
+        'email' => 'jane@example.com',
+        'content' => 'Thanks for the detailed explanation!',
+        'status' => \app\models\Comment::STATUS_ACTIVE,
+        'created_at' => time(),
+        'updated_at' => time(),
+    ],
+    [
+        'id' => 3,
+        'post_id' => 2,
+        'parent_id' => null,
+        'user_id' => null,
+        'name' => 'Anonymous',
+        'email' => 'anonymous@example.com',
+        'content' => 'Nice framework introduction.',
+        'status' => \app\models\Comment::STATUS_INACTIVE,
+        'created_at' => time(),
+        'updated_at' => time(),
+    ],
+];

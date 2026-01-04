@@ -70,6 +70,7 @@ $config = [
                 
                 // Post management (specific routes before general)
                 'post/create' => 'post/create',
+                'post/drafts' => 'post/drafts',
                 'post/update/<id>' => 'post/update',
                 'post/delete/<id>' => 'post/delete',
                 'post/' => 'post/index',
