@@ -61,9 +61,11 @@ $this->title = 'Блог про мобільні телефони';
                         </div>
                     <?php endforeach; ?>
                     
-                    <div class="text-center">
-                        <?= Html::a('Усі статті', ['/post/index'], ['class' => 'btn btn-lg btn-outline-primary']) ?>
-                    </div>
+                    <?php if (!\Yii::$app->user->isGuest && \Yii::$app->user->identity->is_admin): ?>
+                        <div class="text-center">
+                            <?= Html::a('Усі статті', ['/post/index'], ['class' => 'btn btn-lg btn-outline-primary']) ?>
+                        </div>
+                    <?php endif; ?>
                 <?php else: ?>
                     <div class="alert alert-info">
                         <p>Статті поки що не додані. <?php if (!\Yii::$app->user->isGuest): ?>

@@ -143,11 +143,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <h3 class="mt-4 mb-3">Залишити коментар</h3>
 
-            <?php $form = ActiveForm::begin(['action' => ['/comment/create']]); ?>
+            <?php if (\Yii::$app->user->isGuest): ?>
+                <div class="alert alert-info">
+                    <p>Щоб оставити коментар, будь ласка, <?= Html::a('авторизуйтеся', ['/site/login']) ?> або <?= Html::a('зареєструйтеся', ['/site/signup']) ?>.</p>
+                </div>
+            <?php else: ?>
+                <?php $form = ActiveForm::begin(['action' => ['/comment/create']]); ?>
 
-                <input type="hidden" name="Comment[post_id]" value="<?= $post->id ?>">
-
-                <?php if (!\Yii::$app->user->isGuest): ?>
+                    <input type="hidden" name="Comment[post_id]" value="<?= $post->id ?>">
                     <input type="hidden" name="Comment[user_id]" value="<?= \Yii::$app->user->id ?>">
                     <input type="hidden" name="Comment[name]" value="<?= Html::encode(\Yii::$app->user->identity->username) ?>">
                     <input type="hidden" name="Comment[email]" value="<?= Html::encode(\Yii::$app->user->identity->email) ?>">
@@ -156,26 +159,11 @@ $this->params['breadcrumbs'][] = $this->title;
                         <label class="form-label">Ваш коментар:</label>
                         <textarea class="form-control" name="Comment[content]" rows="4" required></textarea>
                     </div>
-                <?php else: ?>
-                    <div class="mb-3">
-                        <label class="form-label">Ваше ім'я:</label>
-                        <input type="text" class="form-control" name="Comment[name]" required>
-                    </div>
 
-                    <div class="mb-3">
-                        <label class="form-label">Email:</label>
-                        <input type="email" class="form-control" name="Comment[email]" required>
-                    </div>
+                    <button type="submit" class="btn btn-primary">Надіслати коментар</button>
 
-                    <div class="mb-3">
-                        <label class="form-label">Коментар:</label>
-                        <textarea class="form-control" name="Comment[content]" rows="4" required></textarea>
-                    </div>
-                <?php endif; ?>
-
-                <button type="submit" class="btn btn-primary">Надіслати коментар</button>
-
-            <?php ActiveForm::end(); ?>
+                <?php ActiveForm::end(); ?>
+            <?php endif; ?>
         </div>
 
         <div class="col-md-4">

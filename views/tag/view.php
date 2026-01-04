@@ -8,7 +8,7 @@
 use yii\bootstrap5\Html;
 use yii\widgets\LinkPager;
 
-$this->title = 'Метка: ' . Html::encode($tag->name);
+$this->title = 'Мітка: ' . Html::encode($tag->name);
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
